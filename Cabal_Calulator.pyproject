@@ -1,3 +1,3 @@
 {
-    "files": ["main.py","mainwindow.ui","Cabal_Logic.py","Window_Logic.py"]
+    "files": ["mainwindow.ui","Window_Logic.py","main.py","Cabal_Logic.py"]
 }

@@ -16,11 +16,11 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QTabWidget" name="tabWidget">
         <property name="currentIndex">
-         <number>1</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="tab_gems2alz">
          <attribute name="title">
@@ -195,6 +195,93 @@
           </item>
          </layout>
         </widget>
+        <widget class="QWidget" name="tab_rse">
+         <attribute name="title">
+          <string>RSE Profit</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QGridLayout" name="gridLayout">
+            <property name="leftMargin">
+             <number>25</number>
+            </property>
+            <property name="topMargin">
+             <number>15</number>
+            </property>
+            <property name="rightMargin">
+             <number>25</number>
+            </property>
+            <property name="bottomMargin">
+             <number>15</number>
+            </property>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Orb of Wind Price</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLineEdit" name="le_earth"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLineEdit" name="le_ice"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Orb of Earth Price</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Orb of Fire Price</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="le_fire"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Orb of Ice Price</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="pb_compute_rse">
+              <property name="text">
+               <string>Compute!</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLineEdit" name="le_wind"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="le_ro_craft_price">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>RSE Craft Price</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0" colspan="3">
+             <widget class="QTextBrowser" name="tb_log_console"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </item>
      </layout>
@@ -213,6 +300,26 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>le_gems</tabstop>
+  <tabstop>le_voucher_price</tabstop>
+  <tabstop>pb_compute</tabstop>
+  <tabstop>le_cc</tabstop>
+  <tabstop>le_vp</tabstop>
+  <tabstop>pb_compute_cc</tabstop>
+  <tabstop>le_ice</tabstop>
+  <tabstop>le_earth</tabstop>
+  <tabstop>le_fire</tabstop>
+  <tabstop>le_wind</tabstop>
+  <tabstop>pb_compute_rse</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tb_console_cc</tabstop>
+  <tabstop>le_result</tabstop>
+  <tabstop>tb_console</tabstop>
+  <tabstop>le_ro_cc2alz_res</tabstop>
+  <tabstop>tb_log_console</tabstop>
+  <tabstop>le_ro_craft_price</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

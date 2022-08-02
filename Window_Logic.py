@@ -8,6 +8,8 @@ class GUI_Logic:
                         SIGNAL('clicked()'), self.__pb_compute_gems_slot)
         QObject.connect(self.window_handle.pb_compute_cc,
                         SIGNAL('clicked()'), self.__pb_compute_cc_slot)
+        QObject.connect(self.window_handle.pb_compute_rse,
+                        SIGNAL('clicked()'), self.__pb_compute_rse_slot)
 
     def __init__(self, window):
         self.window_handle = window
@@ -66,3 +68,41 @@ class GUI_Logic:
         alz_equivalent = str(CL.cc2alz(cc, vp))
         self.__log_msg_cc(f'CC calculated in alz: {alz_equivalent}')
         self.__set_alz_cost_cc(alz_equivalent)
+
+    def __log_msg_rse(self, msg):
+        self.window_handle.tb_log_console.append(msg)
+
+    def __get_ice_orb_price(self):
+        ice_price = self.__get_le_text(self.window_handle.le_ice)
+        self.__log_msg_rse(f'Orb of Ice price {ice_price}')
+        return float(ice_price)
+
+    def __get_earth_orb_price(self):
+        earth_price = self.__get_le_text(self.window_handle.le_earth)
+        self.__log_msg_rse(f'Orb of Earth price {earth_price}')
+        return float(earth_price)
+
+    def __get_fire_orb_price(self):
+        fire_price = self.__get_le_text(self.window_handle.le_fire)
+        self.__log_msg_rse(f'Orb of fire price {fire_price}')
+        return float(fire_price)
+
+    def __get_wind_orb_price(self):
+        wind_price = self.__get_le_text(self.window_handle.le_wind)
+        self.__log_msg_rse(f'Orb of Wind price {wind_price}')
+        return float(wind_price)
+
+    def __set_rse_price(self, rse_price):
+        self.__log_msg_rse(f'Rune Slot Extender craft price: {rse_price}')
+        self.__set_line_edit(self.window_handle.le_ro_craft_price, rse_price)
+
+    def __pb_compute_rse_slot(self):
+        l_prices = []
+        l_prices.append(self.__get_ice_orb_price())
+        l_prices.append(self.__get_earth_orb_price())
+        l_prices.append(self.__get_fire_orb_price())
+        l_prices.append(self.__get_wind_orb_price())
+
+        orbs_needed = 10
+        rse_price = str(CL.RSE_craft_price(l_prices, orbs_needed))
+        self.__set_rse_price(rse_price)
